@@ -8,9 +8,6 @@ const {
 } = require('@discordjs/voice');
 
 module.exports = (message, args) => {
-    console.log("st1");
-    console.log(message.member.voice.channel.id, message.guildId, args[0], message.guild.voiceAdapterCreator)
-
 
     const connection = joinVoiceChannel({
         channelId: message.member.voice.channel.id,

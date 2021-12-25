@@ -19,8 +19,12 @@ module.exports = (message, prefix) => {
             break;
         }
         case "playyt": {
-            console.log("st0");
             commands.playYt(message, args);
+            break;
+        }
+        case "getonl": {
+            commands.getonl(message);
+            break;
         }
         default: {
             break;

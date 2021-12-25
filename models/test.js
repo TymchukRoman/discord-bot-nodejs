@@ -8,6 +8,10 @@ const testSchema = new mongoose.Schema({
     author: {
         type: Object,
         required: true,
+    },
+    channel: {
+        type: String,
+        required: true,
     }
 }, { collection: 'tests' })
 

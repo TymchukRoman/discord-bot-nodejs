@@ -2,7 +2,7 @@ const Test = require("../models/test");
 
 module.exports = async (message, args) => {
 
-    const msg = args.join(', ');
+    const msg = args.join(' ');
     const newtest = new Test({
         msg,
         author: {

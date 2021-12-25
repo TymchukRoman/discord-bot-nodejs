@@ -36,17 +36,15 @@ client.on("messageCreate", function (message) {
             commands.sum(message, args);
             break;
         }
-        default: { 
+        case "wtb": {
+            commands.wtb(message, args);
+            break;
+        }
+        default: {
             break;
         }
     }
 });
 
-try {
-    client.login(config.BOT_TOKEN);
-} catch (e) {
-    console.log("Errors when starting: ", JSON.stringify(e));
-} finally {
-    console.log("Bot started")
-}
+client.login(config.BOT_TOKEN);
 

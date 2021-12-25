@@ -1,6 +1,6 @@
 const commands = require("../commands/commands_router");
 
-module.exports = (message) => {
+module.exports = (message, prefix) => {
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
@@ -17,6 +17,10 @@ module.exports = (message) => {
         case "wtb": {
             commands.wtb(message, args);
             break;
+        }
+        case "playyt": {
+            console.log("st0");
+            commands.playYt(message, args);
         }
         default: {
             break;

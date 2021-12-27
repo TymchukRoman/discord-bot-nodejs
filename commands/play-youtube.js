@@ -26,8 +26,6 @@ module.exports = async (message, args) => {
 
     let info = await ytdl.getInfo(args[0]);
 
-    console.log(info.videoDetails);
-
     message.channel.send(`Now playing ${info.videoDetails.title}`);
     player.play(resource);
     connection.subscribe(player);

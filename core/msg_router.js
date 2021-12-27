@@ -26,6 +26,10 @@ module.exports = (message, prefix) => {
             commands.getonl(message);
             break;
         }
+        case "collector": {
+            commands.collector(message);
+            break;
+        }
         default: {
             break;
         }
